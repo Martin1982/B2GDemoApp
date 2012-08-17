@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Firefox OS</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#gonk">Gonk</a></li>
+              <li><a href="#gecko">Gecko</a></li>
+              <li><a href="#gaia">Gaia</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Welcome FirefoxOS user!</h1>
+        <p>We are glad to have you on our application, actually this is just a copy of the Twitter Bootstrap 2.0. In this app we will have a look at the fundamentals of FirefoxOS and provide you with links to get started using this brand new awesome open web OS!</p>
+        <p><a class="btn btn-primary btn-large" id="learnMore">Learn more &raquo;</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <a name="gonk"></a>
+        <div class="span4">
+          <h2>Gonk</h2>
+           <p>The lower-level "operating system" of b2g. Gonk consists of a linux kernel and userspace hardware abstraction layer (HAL). The kernel and several userspace libraries are common open-source projects: linux, libusb, bluez, etc. Some other parts of the HAL are shared with the android project: GPS, camera, among others. You could say that Gonk is an extremely simple linux distribution. Gonk is a porting target of Gecko; there is a port of Gecko to Gonk, just like there is a port of Gecko to OS X, and a port of Gecko to Android. Since the b2g project has full control over Gonk, we can expose interfaces to Gecko that aren't possible to expose on other OSes. For example, Gecko has direct access to the full telephony stack and display framebuffer on Gonk, but doesn't have this access on any other OS. </p>
+          <p><a class="btn" href="https://wiki.mozilla.org/Gonk">View details &raquo;</a></p>
+        </div>
+        <a name="gecko"></a>
+        <div class="span4">
+          <h2>Gecko</h2>
+           <p>The "application runtime" of b2g. At a high level, Gecko implements the open standards for HTML, CSS, and JS and makes those interfaces run well on all the OSes that Gecko supports. This means that Gecko consists of, among other things, a networking stack, graphics stack, layout engine, virtual machine (for JS), and porting layers. </p>
+          <p><a class="btn" href="https://wiki.mozilla.org/Gecko">View details &raquo;</a></p>
+       </div>
+        <a name="gaia"></a>
+        <div class="span4">
+          <h2>Gaia</h2>
+          <p>The user interface of b2g. Everything drawn to screen after b2g starts up is some part of Gaia. Gaia implements a lock screen, home screen, telephone dialer, text-messaging application, camera app, ... and many more. Gaia is written entirely in HTML, CSS, and JavaScript. Its only interface to the underlying operating system is through Open Web APIs, which are implemented by Gecko. Gaia works well when run on top of b2g; however, since it only uses standard web APIs, it works on other OSes and in other web browsers (albeit with degraded functionality). Third-party applications can be installed alongside Gaia.</p>
+          <p><a class="btn" href="https://wiki.mozilla.org/Gaia">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Martin de Keijzer 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $('document').ready(function(){
+            $('#learnMore').click(function(){
+                window.location.href = 'http://www.slideshare.net/martin82';
+            });
+        })
+    </script>
+
+  </body>
+</html>
